@@ -30,12 +30,13 @@ const store = async (req, res, next) => {
     });
 
     res.redirect('back')
+}
 
+//[GET] bill/:id/watch/back
+const back = async (req, res, next) => {
 
-    // const bill = await Bill.findById(req.body.idbill);
-
-    // console.log(req.body.idbill);
+    res.redirect('/checkIO')
 
 }
 
-module.exports = { watch, store };
+module.exports = { watch, store, back };
