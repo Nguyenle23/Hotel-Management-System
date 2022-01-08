@@ -14,6 +14,7 @@ const servicedetailRouter = require('./servicedetail');
 
 const checkIORouter = require('./checkIO');
 const createIORouter = require('./createIO');
+const listBillRouter = require('./listBill');
 const bookingRoomRouter = require('./bookingRoom');
 const serviceTabRouter = require('./serviceTab');
 const roommanagerRouter = require('./roommanager');
@@ -29,6 +30,7 @@ function route(app) {
     app.use('/roommanager', roommanagerRouter);
     app.use('/serviceTab', serviceTabRouter);
     app.use('/bookingRoom', bookingRoomRouter);
+    app.use('/listBill', listBillRouter);
     app.use('/createIO', createIORouter);
     app.use('/checkIO', checkIORouter);
     app.use('/bill', billRouter);
