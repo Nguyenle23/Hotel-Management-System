@@ -39,6 +39,13 @@
                 <span>Tạo phiếu check In - Out</span></a>
         </li>
 
+        <!-- Nav Item - Danh sách hóa đơn -->
+        <li class="nav-item">
+            <a class="nav-link" href="/listBill">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách hóa đơn</span></a>
+        </li>
+
         <!-- Nav Item - datphong -->
         <li class="nav-item">
             <a class="nav-link" href="/bookingRoom">
@@ -46,17 +53,17 @@
                 <span>Danh sách đặt phòng</span></a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="/roommanager/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phòng</span></a>
+        </li>
+
         <!-- Nav Item - datphong -->
         <li class="nav-item">
             <a class="nav-link" href="/serviceTab">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Danh sách dịch vụ</span></a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="/roommanager/store">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Danh sách phòng</span></a>
         </li>
 
         <!-- Nav Item - datphong -->
@@ -91,8 +98,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
-
-            <!-- Sidebar Toggle (Topbar) -->
+<!-- Sidebar Toggle (Topbar) -->
             <form class="form-inline">
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
@@ -159,7 +165,7 @@
         <!-- End of Topbar -->
 
         <!-- Main Content -->
-        <div id="content">
+<div id="content">
             <div class="container-fluid">
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
@@ -313,7 +319,6 @@
                                                                     <input type='button' value='-'
                                                                         class='qtyminus btn btn-fill btn-info btn-circle'
                                                                         field='quantity' />
-
                                                                     <input type='text' id="input-number" name='quantity'
                                                                         value='0' class='qty' />
 
@@ -346,6 +351,9 @@
                                                                 <button type="submit" class="btn btn-info btn-fill">LƯU
                                                                     HÓA
                                                                     ĐƠN</button>
+                                                                {{!-- <br>
+                                                                <br>
+                                                                <button type="submit" class="btn btn-info btn-fill">XUẤT HÓA ĐƠN</button> --}}
                                                             </div>
 
                                                             <div class="clearfix"></div>
@@ -353,6 +361,11 @@
                                                         </div>
                                                     </div>
                                                 </form>
+                                                <a href="/bill/{{bill._id}}/watch/backCheckIO">
+                                                    <button type="submit" class="btn btn-info btn-fill">XUẤT HÓA ĐƠN</button>
+                                                </a>
+                                                <br>
+                                                <br>
                                             </div><!-- End of content -->
                                         </div><!-- End of card -->
                                     </div><!-- End of col -->
@@ -373,10 +386,11 @@
 {{!-- Bill Operator --}}
 <script>
 
-
     var values = document.querySelector('.value');
     var string = values.value;
     var valueArr = string.split(',');
+    //valueArr.forEach(i => console.log(i))
+
     console.log(valueArr[0]);
     console.log(valueArr[1]);
     console.log(valueArr[2]);
@@ -385,9 +399,13 @@
 
     var qty = document.querySelectorAll('.qty').forEach(item => {
 
+        if (valueArr[position] == null || valueArr[position] == '') {
+            valueArr[position] = 0;
+        }
         item.value = valueArr[position];
+
         position++;
-        console.log(item.value);
+        //console.log(item.value);
         productTotal();
         Total();
     })
