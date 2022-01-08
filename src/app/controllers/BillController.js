@@ -14,10 +14,9 @@ const watch = async (req, res, next) => {
     const service = await Service.find();
     const customer1 = await Customer.findById(req.params.id).populate('idphong');
     const bill = await Bill.findOne({ customerID: customer._id })
-    //console.log(bill.quantity[0]);
+    // res.render('bill/xemHoadon', { customer: mongooseToObject(customer), customer1: mongooseToObject(customer1), bill: mongooseToObject(bill), service: multipleMongooseToObject(service) })
 
-    res.render('bill/xemHoadon', { customer: mongooseToObject(customer), customer1: mongooseToObject(customer1), bill: mongooseToObject(bill), service: multipleMongooseToObject(service) })
-
+    res.send('test')
 }
 
 //[PUT] bill/:id/store
