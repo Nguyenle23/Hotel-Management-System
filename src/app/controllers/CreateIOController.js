@@ -25,13 +25,22 @@ const storeIO = async (req, res, next) => {
 
     const room = await Room.findOne({ sophong: req.body.sophong })
 
-    // console.log(room.sophong, room.id)
-
     customer.idphong = room._id;
 
+    const room1 = await Room.findOneAndUpdate({ _id: customer.idphong }, {status: '2'}, {new: true})
+
+    const bill = new Bill(req.body);
+    
+    const userID = customer.id;
+
+    bill.customerID = userID;
+
+    bill.save()
+ 
     customer.save()
         .then(() => res.redirect('/createIO'))
         .catch(next);
+
 }
 
 // [GET] /createIO/searchRoom (danh sach dat phong)

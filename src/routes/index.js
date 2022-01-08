@@ -20,6 +20,8 @@ const roommanagerRouter = require('./roommanager');
 const promotionTabRouter = require('./promotionTab');
 const employeeRouter = require('./employee');
 
+const billRouter = require('./bill');
+
 function route(app) {
     
     app.use('/employee', employeeRouter);
@@ -29,6 +31,7 @@ function route(app) {
     app.use('/bookingRoom', bookingRoomRouter);
     app.use('/createIO', createIORouter);
     app.use('/checkIO', checkIORouter);
+    app.use('/bill', billRouter);
 
     app.use('/servicedetail', servicedetailRouter);
     app.use('/suite', suiteRouter);
