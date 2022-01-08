@@ -13,9 +13,11 @@ const suiteRouter = require('./standard');
 const servicedetailRouter = require('./servicedetail');
 
 const checkIORouter = require('./checkIO');
+const createIORouter = require('./createIO');
 
 function route(app) {
 
+    app.use('/createIO', createIORouter);
     app.use('/checkIO', checkIORouter);
 
     app.use('/servicedetail', servicedetailRouter);
