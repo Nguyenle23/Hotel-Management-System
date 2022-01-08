@@ -35,6 +35,12 @@ const store = async (req, res, next) => {
 //[GET] bill/:id/watch/back
 const back = async (req, res, next) => {
 
+    const bill = await Bill.findByIdAndUpdate(req.params.id, {status: '1'});
+
+    const cusID = await Customer.findByIdAndUpdate(bill.customerID, {status: '3'});
+
+    const room = await Room.findByIdAndUpdate(cusID.idphong, {status: '0'})
+
     res.redirect('/checkIO')
 
 }
