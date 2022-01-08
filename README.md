@@ -1,9 +1,9 @@
 # demo-hotel
 demo-hotel-project 
-  <br/>
-  Which is the collaboration between kasle & nguyenle
 <br/>
-- It works with the URL: https://demo-hotel-live.herokuapp.com/?fbclid=IwAR0MEI4_9huVQH1n4WCogfhiokQHV4OgaP14CPMVE3lJRiD0uKh2c-EGbPQ
+Which is the collaboration between kasle & nguyenle
+<br/>
+It works with the URL: https://demo-hotel-live.herokuapp.com/?fbclid=IwAR0MEI4_9huVQH1n4WCogfhiokQHV4OgaP14CPMVE3lJRiD0uKh2c-EGbPQ
 <br/>
 * How to clone:
 - Click -> Code -> Open with Github desktop (Recommend use Github desktop for easy to clone a project)
