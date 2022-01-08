@@ -15,9 +15,11 @@ const servicedetailRouter = require('./servicedetail');
 const checkIORouter = require('./checkIO');
 const createIORouter = require('./createIO');
 const bookingRoomRouter = require('./bookingRoom');
+const serviceTabRouter = require('./serviceTab');
 
 function route(app) {
 
+    app.use('/serviceTab', serviceTabRouter);
     app.use('/bookingRoom', bookingRoomRouter);
     app.use('/createIO', createIORouter);
     app.use('/checkIO', checkIORouter);
