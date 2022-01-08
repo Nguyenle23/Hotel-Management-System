@@ -24,6 +24,7 @@
             Danh mục
         </div>
 
+
         <!-- Nav Item - Taophieucheckin_out -->
         <li class="nav-item">
             <a class="nav-link" href="/checkIO">
@@ -38,18 +39,18 @@
                 <span>Tạo phiếu check In - Out</span></a>
         </li>
 
-        <!-- Nav Item - datphong -->
+        <!-- Nav Item - Danh sách hóa đơn -->
         <li class="nav-item">
-            <a class="nav-link" href="/bookingRoom">
+            <a class="nav-link" href="/listBill">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Quản lý đặt phòng</span></a>
+                <span>Danh sách hóa đơn</span></a>
         </li>
 
         <!-- Nav Item - datphong -->
         <li class="nav-item">
-            <a class="nav-link" href="/serviceTab">
+            <a class="nav-link" href="/bookingRoom">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Quản lý dịch vụ</span></a>
+                <span>Danh sách đặt phòng</span></a>
         </li>
 
         <li class="nav-item">
@@ -60,9 +61,16 @@
 
         <!-- Nav Item - datphong -->
         <li class="nav-item">
+            <a class="nav-link" href="/serviceTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách dịch vụ</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
             <a class="nav-link" href="/promotionTab">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Quản lý khuyến mãi</span></a>
+                <span>Danh sách khuyến mãi</span></a>
         </li>
 
         <!-- Nav Item - Danh sách phản hồi -->
@@ -79,7 +87,6 @@
                 <i class="fas fa-fw fa-table"></i>
                 <span>Danh sách nhân viên</span></a>
         </li>
-
     </ul>
     <!-- End of Sidebar -->
 
@@ -198,9 +205,9 @@
                                                 <button type="submit" class="btn btn-info btn-fill">Chỉnh sửa</button>
                                             </a>
                                         </td>
-                                        <td><a class="btn btn-info btn-fill" data-toggle="modal"
-                                                data-id="{{this._id}}" data-target="#delete-promotion-modal">Xoá</a>
-                                        </td>
+                                        <td><a><button class="btn btn-info btn-fill pull-right" data-toggle="modal"
+                                                    data-id="{{this._id}}"
+                                                    data-target="#delete-promotion-modal">Xoá</button></a> </td>
                                     </tr>
                                     {{/each}}
                                 </tbody>
