@@ -156,8 +156,8 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <div class="d-flex justify-content-between">
-                            <h6 style="font-weight: bolder; font-size:25px;" class="m-0 text-primary">Danh sách dịch vụ
-                            </h6>
+                            <h6 style="font-weight: bolder; font-size:25px;" class="m-0 text-primary">Danh sách khuyến
+                                mãi</h6>
                             <!-- Search section -->
                             <form action="/???????">
                                 <div class="input-group">
@@ -174,33 +174,33 @@
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Mã dịch vụ</th>
-                                        <th>Loại dịch vụ</th>
-                                        <th>Tên dịch vụ</th>
-                                        <th>Giá dịch vụ</th>
-                                        <th>Mô tả</th>
-                                        <th>Chỉnh sửa dịch vụ</th>
+                                        <th>Mã khuyến mãi</th>
+                                        <th>Ngày áp dụng</th>
+                                        <th>Ngày hết hạn</th>
+                                        <th>Giá khuyến mãi</th>
+                                        <th>Nội dung khuyến mãi</th>
+                                        <th>Chỉnh sửa khuyến mãi</th>
                                         <th>Xóa</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    {{#each service}}
+                                    {{#each promotion}}
                                     <tr>
                                         <td>{{@index}}</td>
-                                        <td>{{this.madv}}</td>
-                                        <td>{{this.loaidv}}</td>
-                                        <td>{{this.tendv}}</td>
-                                        <td>{{this.giadv}}</td>
-                                        <td>{{this.motadv}}</td>
-                                        <td><a href="/serviceTab/{{this._id}}/edit">
+                                        <td>{{this.makm}}</td>
+                                        <td>{{this.ngayapdung}}</td>
+                                        <td>{{this.ngayhethan}}</td>
+                                        <td>{{this.giakm}}</td>
+                                        <td>{{this.motakm}}</td>
+                                        <td>
+                                            <a href="/promotionTab/{{this._id}}/edit">
                                                 <button type="submit" class="btn btn-info btn-fill">Chỉnh sửa</button>
+                                            </a>
                                         </td>
                                         <td><a class="btn btn-info btn-fill" data-toggle="modal"
-                                                data-id="{{this._id}}" data-target="#delete-service-modal">Xoá</a></td>
-
-                                        </a>
-
+                                                data-id="{{this._id}}" data-target="#delete-promotion-modal">Xoá</a>
+                                        </td>
                                     </tr>
                                     {{/each}}
                                 </tbody>
@@ -211,7 +211,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <div class="d-flex justify-content-between">
-                            <h6 style="font-weight: bolder; font-size:20px;" class="m-0 text-primary">Tạo dịch vụ mới
+                            <h6 style="font-weight: bolder; font-size:20px;" class="m-0 text-primary">Tạo khuyến mãi mới
                             </h6>
                             <!-- Search section -->
                             {{!-- <form action="/???????">
@@ -228,59 +228,59 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Mã dịch vụ</th>
-                                        <th>Loại dịch vụ</th>
-                                        <th>Tên dịch vụ</th>
-                                        <th>Giá dịch vụ</th>
-                                        <th>Mô tả</th>
+                                        <th>Mã Khuyến mãi</th>
+                                        <th>Ngày áp dụng</th>
+                                        <th>Ngày hết hạn</th>
+                                        <th>Giá khuyến mãi </th>
+                                        <th>Nội dung khuyến mãi </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <!--Form store database-->
-                                        <form method="POST" action="/serviceTab/storeServiceTab">
-                                            <td><input type="text" name="madv" class="form-control"
-                                                    placeholder="Nhập mã dịch vụ"></td>
-                                            <td><input type="text" name="loaidv" class="form-control"
-                                                    placeholder="Nhập loại dịch vụ"></td>
-                                            <td><input type="text" name="tendv" class="form-control"
-                                                    placeholder="Nhập tên dịch vụ"></td>
-                                            <td><input type="text" name="giadv" class="form-control"
+                                        <form method="POST" action="/promotionTab/storePromotionTab">
+                                            <td><input type="text" name="makm" class="form-control"
+                                                    placeholder="Nhập mã khuyến mãi"></td>
+                                            <td><input type="date" name="ngayapdung" class="form-control"
+                                                    placeholder="Nhập ngày áp dụng"></td>
+                                            <td><input type="date" name="ngayhethan" class="form-control"
+                                                    placeholder="Nhập ngày hết hạn" a></td>
+                                            <td><input type="text" name="giakm" class="form-control"
                                                     placeholder="Nhập giá dịch vụ"></td>
-                                            <td><input type="text" name="motadv" class="form-control"
-                                                    placeholder="Nhập mô tả dịch vụ"></td>
+                                            <td><input type="text" name="motakm" class="form-control"
+                                                    placeholder="Nhập nội dung khuyến mãi"></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <td><button type="submit" class="btn btn-info btn-fill">Tạo dịch vụ</button></td>
+                            <td><button type="submit" class="btn btn-info btn-fill">Tạo khuyến mãi</button></td>
                             </form>
                         </div>
                     </div>
 
                 </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
 
         </div>
 
 
 
-        {{!-- Confirm delete service --}}
-        <div id="delete-service-modal" class="modal" tabindex="-1" role="dialog">
+        {{!-- Confirm delete promotion --}}
+        <div id="delete-promotion-modal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Xóa dịch vụ</h5>
+                        <h5 class="modal-title">Xóa khuyến mãi</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Bạn có chắc chắn muốn xóa dịch vụ này?</p>
+                        <p>Bạn có chắc chắn muốn xóa khuyến mãi này?</p>
                     </div>
                     <div class="modal-footer">
-                        <button id="btn-delete-service" type="button" class="btn btn-danger">Xóa bỏ</button>
+                        <button id="btn-delete-promotion" type="button" class="btn btn-danger">Xóa bỏ</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
 
                     </div>
@@ -289,22 +289,22 @@
         </div>
 
         {{!-- Delete hidden form --}}
-        <form name="delete-service-form" method="POST"></form>
+        <form name="delete-promotion-form" method="POST"></form>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var serviceId;
-                var deleteForm = document.forms['delete-service-form'];
-                var btnDeleteService = document.getElementById('btn-delete-service');
+                var promotionId;
+                var deleteForm = document.forms['delete-promotion-form'];
+                var btnDeletePromotion = document.getElementById('btn-delete-promotion');
 
                 //Khi dialog confirm clicked
-                $('#delete-service-modal').on('show.bs.modal', function (event) {
+                $('#delete-promotion-modal').on('show.bs.modal', function (event) {
                     var button = $(event.relatedTarget);
-                    serviceId = button.data('id');
+                    promotionId = button.data('id');
                 });
 
-                btnDeleteService.onclick = function () {
-                    deleteForm.action = '/serviceTab/' + serviceId + '?_method=DELETE';
+                btnDeletePromotion.onclick = function () {
+                    deleteForm.action = '/promotionTab/' + promotionId + '?_method=DELETE';
                     deleteForm.submit();
                 }
 

@@ -1,0 +1,211 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/checkIO">
+            <div class=" img-dash">
+                <img src="/img/logo.jpg" alt="logo_ks">
+                <!-- <i class="fas fa-laugh-wink"></i> -->
+            </div>
+            <!-- <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div> -->
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Danh mục
+        </div>
+
+        <!-- Nav Item - Taophieucheckin_out -->
+        <li class="nav-item">
+            <a class="nav-link" href="/checkIO">
+                <i class="fas fa-fw fa-table"></i>
+                <span> Phiếu check In - Out</span></a>
+        </li>
+
+        <!-- Nav Item - Taobaocaodaohthu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/createIO">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tạo phiếu check In - Out</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/bookingRoom">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý đặt phòng</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/serviceTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý dịch vụ</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/roommanager/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phòng</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/promotionTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý khuyến mãi</span></a>
+        </li>
+
+        <!-- Nav Item - Danh sách phản hồi -->
+        <li class="nav-item">
+            <a class="nav-link" href="/feedback/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phản hồi</span></a>
+        </li>
+
+
+        <!-- Nav Item - Danh sách nhân viên -->
+        <li class="nav-item">
+            <a class="nav-link" href="/employee/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách nhân viên</span></a>
+        </li>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <form class="form-inline">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+
+                </li>
+
+                <!-- Nav Item - Alerts -->
+                <li class="nav-item dropdown no-arrow mx-1">
+
+                </li>
+
+                <!-- Nav Item - Messages -->
+                <li class="nav-item dropdown no-arrow mx-1">
+                </li>
+
+                <div class="topbar-divider d-none d-sm-block"></div>
+
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Lê Mai Khánh</span>
+                        <img class="img-profile rounded-circle" src="/img/ava/kasle.jpg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
+                        {{!-- <div class="dropdown-divider"></div> --}}
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <div class="d-flex justify-content-between">
+                            <h6 style="font-weight: bolder; font-size:25px;" class="m-0 text-primary">Danh sách khuyến
+                                mãi</h6>
+                            <!-- Search section -->
+                            <form action="/???????">
+                                <div class="input-group">
+                                    <input style="width:700px" type="text" name="q" class="form-control mr-6 w-10"
+                                        placeholder="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Mã khuyến mãi</th>
+                                        <th>Ngày áp dụng</th>
+                                        <th>Ngày hết hạn</th>
+                                        <th>Giá khuyến mãi</th>
+                                        <th>Nội dung khuyến mãi</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <form method="POST" action="/promotionTab/{{promotion._id}}?_method=PUT">
+                                        <tr>
+                                            <td><input name="makm" type="text" class="form-control"
+                                                    value="{{promotion.makm}}"></td>
+                                            <td><input name="loaikm" type="text" class="form-control"
+                                                    value="{{promotion.ngayapdung}}"></td>
+                                            <td><input name="tenkm" type="text" class="form-control"
+                                                    value="{{promotion.ngayhethan}}"></td>
+                                            <td><input name="giakm" type="text" class="form-control"
+                                                    value="{{promotion.giakm}}"></td>
+                                            <td><input name="motakm" type="text" class="form-control"
+                                                    value="{{promotion.motakm}}"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                            <a>
+                                <button type="submit" class="btn btn-info btn-fill">Lưu thông tin</button>
+                            </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+
+        </div>
