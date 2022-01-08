@@ -16,9 +16,11 @@ const checkIORouter = require('./checkIO');
 const createIORouter = require('./createIO');
 const bookingRoomRouter = require('./bookingRoom');
 const serviceTabRouter = require('./serviceTab');
+const roommanagerRouter = require('./roommanager');
 
 function route(app) {
 
+    app.use('/roommanager', roommanagerRouter);
     app.use('/serviceTab', serviceTabRouter);
     app.use('/bookingRoom', bookingRoomRouter);
     app.use('/createIO', createIORouter);
