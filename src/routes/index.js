@@ -10,9 +10,11 @@ const standardRouter = require('./standard');
 const superviorRouter = require('./standard');
 const delexuryRouter = require('./standard');
 const suiteRouter = require('./standard');
+const servicedetailRouter = require('./servicedetail');
 
 function route(app) {
 
+    app.use('/servicedetail', servicedetailRouter);
     app.use('/suite', suiteRouter);
     app.use('/deluxury', delexuryRouter);
     app.use('/supervior', superviorRouter);
