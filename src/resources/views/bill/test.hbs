@@ -85,3 +85,285 @@
 
 
 
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <form class="form-inline">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+
+                </li>
+
+                <!-- Nav Item - Alerts -->
+                <li class="nav-item dropdown no-arrow mx-1">
+
+                </li>
+
+                <!-- Nav Item - Messages -->
+                <li class="nav-item dropdown no-arrow mx-1">
+                </li>
+
+                <div class="topbar-divider d-none d-sm-block"></div>
+
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Lê Mai Khánh</span>
+                        <img class="img-profile rounded-circle" src="/img/ava/kasle.jpg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+                        {{!-- <a class="dropdown-item" href="profile.html">
+                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Settings
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Activity Log
+                        </a> --}}
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
+                        {{!-- <div class="dropdown-divider"></div> --}}
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Main Content -->
+        <div id="content">
+            <div class="container-fluid">
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 style="font-size: 30px; text-align: center;" class="m-0 font-weight-bolder text-primary">Xem
+                            hóa đơn</h6>
+                    </div>
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        {{!-- <div class="content">
+                            <div class="container-fluid"> --}}
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="content">
+                                                <table class="table">
+                                                    <!--dong 1-->
+                                                    <div class="row">
+                                                        <!--cot1-->
+                                                        <div class="col-6">
+
+                                                            <div class="row justify-content-between mt-4">
+                                                                <div class="col-4">
+                                                                    <label>Số phiếu Check In - Out: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label>{{customer._id}}</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Số hóa đơn: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    {{!-- <input type="text" name="billID"
+                                                                        value="{{bill._id}}" hidden /> --}}
+                                                                    <label>{{bill._id}}</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Tình trạng hoá đơn:</label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    {{!--
+                                                                    <label>{{customer.tinhtranghoadon}}</label> --}}
+                                                                    <label>Đang chờ thanh toán</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Ngày tạo: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label>{{customer.createdAt}}</label>
+                                                                </div>
+                                                            </div>
+                                                            <!--Divider-->
+                                                            <div class="dropdown-divider"></div>
+                                                            <!--Divider-->
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Tên khách hàng: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label>{{customer.hovaten}}</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Số điện thoại khách hàng: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label>{{customer.sodienthoai}}</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Ngày nhận: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label>{{customer.ngaynhan}}</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-4">
+                                                                    <label>Ngày trả: </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label>{{customer.ngaytra}}</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </table>
+                                                <div class="row">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Số phòng</th>
+                                                                <th scope="col">Loại phòng</th>
+                                                                <th scope="col">Giá phòng</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>{{customer1.idphong.sophong}}</td>
+                                                                <td>{{customer1.idphong.type}}</td>
+                                                                <td id="room-price">{{customer1.idphong.price}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <br>
+                                                {{!-- <p style="font-size: 24px; text-align: left;">Dịch vụ</p> --}}
+                                                <form method="POST" action="/bill/:id/store?_method=PUT">
+
+                                                    <table class="table">
+                                                        {{!-- {{#each bill.quantity}} --}}
+                                                        <input type="text" class="value" value="{{bill.quantity}}"
+                                                            hidden />
+                                                        {{!-- {{/each}} --}}
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">STT</th>
+                                                                <th scope="col">Tên dịch vụ</th>
+                                                                <th scope="col">Đơn giá</th>
+                                                                <th scope="col">Số lượng</th>
+                                                                <th scope="col">Thành tiền</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <input type="text" name="customerID"
+                                                                value="{{customer._id}}" hidden />
+                                                            <input type="text" name="billID" value="{{bill._id}}"
+                                                                hidden />
+                                                            {{#each service}}
+                                                            <tr>
+                                                                <th scope="row">{{@index}}</th>
+                                                                <td>
+                                                                    <input hidden type='text' name="tenDV"
+                                                                        value="{{this.tendv}}" />
+                                                                    {{this.tendv}}
+                                                                </td>
+                                                                <td>{{this.giadv}}</td>
+                                                                <td>
+                                                                    <input type='button' value='-'
+                                                                        class='qtyminus btn btn-fill btn-info btn-circle'
+                                                                        field='quantity' />
+
+                                                                    <input type='text' id="input-number" name='quantity'
+                                                                        value='0' class='qty' />
+
+                                                                    <input type='button' value='+'
+                                                                        class='qtyplus btn btn-fill btn-info btn-circle'
+                                                                        field='quantity' />
+                                                                </td>
+
+                                                                <td>
+                                                                    <span class="span product-total-price" value="0"
+                                                                        data-price="{{this.giadv}}">0 VNĐ
+                                                                    </span>
+                                                                    <input hidden name="totalPD" type="text"
+                                                                        class="form-control" value="0">
+                                                                </td>
+                                                            </tr>
+                                                            {{/each}}
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Tổng tiền</label>
+                                                                    <input name="total" type="text" id="total"
+                                                                        class="form-control"
+                                                                        value="{{customer1.idphong.price}} VNĐ">
+                                                                </div>
+
+                                                                <button type="submit" class="btn btn-info btn-fill">LƯU
+                                                                    HÓA
+                                                                    ĐƠN</button>
+                                                            </div>
+
+                                                            <div class="clearfix"></div>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div><!-- End of content -->
+                                        </div><!-- End of card -->
+                                    </div><!-- End of col -->
+                                </div><!-- End of row -->
+                                {{!--
+                            </div><!-- End of content-fluid -->
+                        </div><!-- End of content --> --}}
+                    </div>
+                    <!--End content fluid begin-->
+                </div>
+                <!--End card shadow mb-4-->
+            </div><!-- End of container-fluid -->
+        </div><!-- End of Main Content -->
+    </div><!-- End Content Wrapper -->
+</div><!-- End wrapper -->
