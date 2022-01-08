@@ -14,7 +14,7 @@ let Customer = new Schema({
     sodienthoai: { type: String, maxLength: 255 },
     ngaynhan: { type: String, maxLength: 255 },
     ngaytra: { type: String, maxLength: 255 },
-    status: { type: String, maxLength: 255 },
+    status: { type: String, maxLength: 255, default: 0 },
 
 }, {
     timestamps: true,
