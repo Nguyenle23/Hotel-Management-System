@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const roommanagerController = require('../app/controllers/roommanagerController');
+const roommanagerController = require('../app/controllers/RoommanagerController');
 
 
 router.get('/', roommanagerController.create);
