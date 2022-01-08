@@ -12,7 +12,11 @@ const delexuryRouter = require('./standard');
 const suiteRouter = require('./standard');
 const servicedetailRouter = require('./servicedetail');
 
+const checkIORouter = require('./checkIO');
+
 function route(app) {
+
+    app.use('/checkIO', checkIORouter);
 
     app.use('/servicedetail', servicedetailRouter);
     app.use('/suite', suiteRouter);

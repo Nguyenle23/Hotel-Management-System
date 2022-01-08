@@ -1,0 +1,409 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/checkIO">
+            <div class=" img-dash">
+                <img src="/img/logo.jpg" alt="logo_ks">
+                <!-- <i class="fas fa-laugh-wink"></i> -->
+            </div>
+            <!-- <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div> -->
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Danh mục
+        </div>
+
+        <!-- Nav Item - Taophieucheckin_out -->
+        <li class="nav-item">
+            <a class="nav-link" href="/checkIO">
+                <i class="fas fa-fw fa-table"></i>
+                <span> Phiếu check In - Out</span></a>
+        </li>
+
+        <!-- Nav Item - Taobaocaodaohthu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/createIO">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tạo phiếu check In - Out</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/bookingRoom">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý đặt phòng</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/serviceTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý dịch vụ</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/roommanager/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phòng</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/promotionTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý khuyến mãi</span></a>
+        </li>
+
+        <!-- Nav Item - Danh sách phản hồi -->
+        <li class="nav-item">
+            <a class="nav-link" href="/feedback/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phản hồi</span></a>
+        </li>
+
+
+        <!-- Nav Item - Danh sách nhân viên -->
+        <li class="nav-item">
+            <a class="nav-link" href="/employee/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách nhân viên</span></a>
+        </li>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <form class="form-inline">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                </li>
+
+                <!-- Nav Item - Alerts -->
+                <li class="nav-item dropdown no-arrow mx-1">
+
+                </li>
+
+                <!-- Nav Item - Messages -->
+                <li class="nav-item dropdown no-arrow mx-1">
+                </li>
+
+                <div class="topbar-divider d-none d-sm-block"></div>
+
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Lê Mai Khánh</span>
+                        <img class="img-profile rounded-circle" src="/img/ava/kasle.jpg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
+                        {{!-- <div class="dropdown-divider"></div> --}}
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 style="font-weight: bolder; font-size:25px;" class="m-0 text-primary">Tạo phiếu Check In -
+                            Out</h6>
+                    </div>
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <div class="content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="content">
+                                                <!--Form store database-->
+                                                <form method="POST" action="/createIO/:id/checkIn/taophieu">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Tên khách hàng</label>
+                                                                <input type="text" name="tenKH" class="form-control"
+                                                                    placeholder="Nhập khách hàng"
+                                                                    value="{{customer.hovaten}}">
+                                                            </div>
+                                                        </div>
+                                                        {{!-- <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Tình trạng hóa đơn</label>
+                                                                <input type="text" name="tinhtranghoadon"
+                                                                    class="form-control"
+                                                                    placeholder="Nhập tình trạng hóa đơn">
+                                                            </div>
+                                                        </div> --}}
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Số điện thoại</label>
+                                                                <input type="text" name="sdt" class="form-control"
+                                                                    placeholder="Nhập số điện thoại"
+                                                                    value="{{customer.sodienthoai}}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Ngày check-in</label>
+                                                                <input type="date" name="ngayvao" class="form-control"
+                                                                    placeholder="Ngày checkin"
+                                                                    value="{{customer.ngaynhan}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Ngày check-out</label>
+                                                                <input type="date" name="ngayra" class="form-control"
+                                                                    placeholder="Ngày checkout"
+                                                                    value="{{customer.ngaytra}}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--cột 2-->
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label>Số phòng</label>
+                                                                <input type="text" name="sophong" class="form-control"
+                                                                    placeholder="Nhập số phòng"
+                                                                    value="{{customer2.idphong.sophong}}">
+                                                            </div>
+                                                        </div>
+                                                        {{!-- <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Loại phòng</label>
+                                                                <input type="text" name="loaiphong" class="form-control"
+                                                                    placeholder="Nhập loại phòng"
+                                                                    value="{{customer.type}}">
+                                                            </div>
+                                                        </div> --}}
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            {{!-- <div class="form-group">
+                                                                <label>Giá phòng</label>
+                                                                <input type="text" name="giaphong" class="form-control"
+                                                                    placeholder="Nhập giá phòng"
+                                                                    value="{{customer2.idphong.price}}">
+                                                            </div> --}}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <a class="btn btn-info btn-fill"
+                                                                    href="/createIO/{{customer._id}}/checkIn/taophieu">Tạo
+                                                                    phiếu</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="clearfix"></div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </br>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    {{!-- <h1 class="h3 mb-2 text-gray-800">Danh sách đặt phòng</h1> --}}
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 style="font-weight: bolder; font-size:20px;"
+                                                    class="m-0 text-primary">Danh sách đặt phòng</h6>
+                                                <!-- Search section -->
+                                                <form action="/createIO/searchBooking">
+                                                    <div class="input-group">
+                                                        <input style="width:300px" type="text" name="q"
+                                                            class="form-control mr-6 w-10" placeholder="Search">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered" id="dataTable" width="100%"
+                                                    cellspacing="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Số phòng</th>
+                                                            <th>Loại phòng</th>
+                                                            <th>Tên KH</th>
+                                                            <th>SĐT</th>
+
+                                                            <th>Ngày nhận phòng</th>
+                                                            <th>Ngày Trả phòng</th>
+                                                            <th>Xác nhận</th>
+
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        {{#each customer1}}
+                                                        <tr>
+                                                            <td>{{this.idphong.sophong}}</td>
+                                                            <th>{{this.idphong.type}}</th>
+                                                            <td>{{this.hovaten}}</td>
+                                                            <td>{{this.sodienthoai}}</td>
+
+                                                            <td>{{this.ngaynhan}}</td>
+                                                            <td>{{this.ngaytra}}</td>
+                                                            {{!-- <td style="font-weight: bolder;"
+                                                                class="m-0 text-primary">
+                                                                Confirmed
+                                                            </td> --}}
+                                                            <td>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        {{!-- <button type="submit"
+                                                                            class="btn btn-info btn-fill">Check
+                                                                            In</button> --}}
+                                                                        <a class="btn btn-info btn-fill"
+                                                                            href="/createIO/{{this._id}}/checkIn">Check
+                                                                            In</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        {{/each}}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    {{!-- <h1 class="h3 mb-2 text-gray-800">Danh sách phòng</h1> --}}
+
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 style="font-weight: bolder; font-size:20px;"
+                                                    class="m-0 text-primary">Danh sách phòng</h6>
+                                                <form action="/createIO/searchListRoom">
+                                                    <div class="input-group">
+                                                        <input style="width:300px" type="text" name="q"
+                                                            class="form-control mr-6 w-10" placeholder="Search">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered" id="dataTable" width="100%"
+                                                    cellspacing="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Số phòng</th>
+                                                            <th>Loại phòng</th>
+                                                            <th>Mô tả phòng</th>
+                                                            <th>Số người tối đa</th>
+                                                            {{!-- <th>Hình ảnh phòng</th> --}}
+                                                            <th>Giá phòng</th>
+                                                            <th>Tình trạng phòng</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {{#each room}}
+                                                        <tr>
+                                                            <td>{{this.sophong}}</td>
+                                                            <td>{{this.type}}</td>
+                                                            <td>Có tivi, wifi, máy lạnh,...</td>
+                                                            <td>{{this.people}}</td>
+                                                            {{!-- <td>hình ảnh phòng</td> --}}
+                                                            <td>{{this.price}}</td>
+                                                            <td>
+                                                                {{#ifCond status '2'}}
+                                                                <div style="font-weight: bolder; color:red">
+                                                                    Occupied
+                                                                </div>
+                                                                {{else}}
+                                                                <div style="font-weight: bolder; color:#43E03A">
+                                                                    Empty
+                                                                </div>
+                                                                {{/ifCond}}
+                                                            </td>
+                                                        </tr>
+                                                        {{/each}}
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- End of Content Wrapper -->
+
+                </div>
+
+            </div>
+            <!-- End of Main Content -->

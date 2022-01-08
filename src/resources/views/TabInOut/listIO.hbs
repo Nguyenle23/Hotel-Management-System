@@ -1,0 +1,239 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/checkIO">
+            <div class=" img-dash">
+                <img src="/img/logo.jpg" alt="logo_ks">
+                <!-- <i class="fas fa-laugh-wink"></i> -->
+            </div>
+            <!-- <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div> -->
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Danh mục
+        </div>
+
+        <!-- Nav Item - Taophieucheckin_out -->
+        <li class="nav-item">
+            <a class="nav-link" href="/checkIO">
+                <i class="fas fa-fw fa-table"></i>
+                <span> Phiếu check In - Out</span></a>
+        </li>
+
+        <!-- Nav Item - Taobaocaodaohthu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/createIO">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tạo phiếu check In - Out</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/bookingRoom">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý đặt phòng</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/serviceTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý dịch vụ</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/roommanager/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phòng</span></a>
+        </li>
+
+        <!-- Nav Item - datphong -->
+        <li class="nav-item">
+            <a class="nav-link" href="/promotionTab">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Quản lý khuyến mãi</span></a>
+        </li>
+
+        <!-- Nav Item - Danh sách phản hồi -->
+        <li class="nav-item">
+            <a class="nav-link" href="/feedback/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách phản hồi</span></a>
+        </li>
+
+
+        <!-- Nav Item - Danh sách nhân viên -->
+        <li class="nav-item">
+            <a class="nav-link" href="/employee/store">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Danh sách nhân viên</span></a>
+        </li>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <form class="form-inline">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow d-sm-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+
+                </li>
+
+                <!-- Nav Item - Alerts -->
+                <li class="nav-item dropdown no-arrow mx-1">
+
+                </li>
+
+                <!-- Nav Item - Messages -->
+                <li class="nav-item dropdown no-arrow mx-1">
+                </li>
+
+                <div class="topbar-divider d-none d-sm-block"></div>
+
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Lê Mai Khánh</span>
+                        <img class="img-profile rounded-circle" src="/img/ava/kasle.jpg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+                        {{!-- <a class="dropdown-item" href="profile.html">
+                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Settings
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Activity Log
+                        </a> --}}
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
+                        {{!-- <div class="dropdown-divider"></div> --}}
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+
+                        <div class="d-flex justify-content-between">
+                            <h6 style="font-weight: bolder; font-size:25px;" class="m-0 text-primary">Danh sách Check In
+                                - Out</h6>
+                            <form action="/checkIO/searchIO">
+                                <div class="input-group">
+                                    <input style="width:700px" type="text" name="q" class="form-control"
+                                        placeholder="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <!-- Search section -->
+                            {{!-- <div class="container">
+                                <form action="/checkIO/searchIO">
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="q" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> --}}
+
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Số phòng</th>
+                                        <th>Tên khách hàng</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Ngày check In</th>
+                                        <th>Ngày check Out</th>
+                                        <th>Xem hóa đơn</th>
+                                        <th>Chỉnh sửa</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    {{#each customer}}
+                                    <tr>
+                                        <td>{{this.idphong.sophong}}</td>
+                                        <td>{{this.hovaten}}</td>
+                                        <td>{{this.sodienthoai}}</td>
+                                        <td>{{this.ngaynhan}}</td>
+                                        <td>{{this.ngaytra}}</td>
+                                        <td>
+                                            <a class="btn btn-info btn-fill" href="/bill/{{this._id}}/watch">Xem hóa
+                                                đơn</a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-info btn-fill" href="/checkIO/{{this._id}}/edit">Chỉnh
+                                                sửa</a>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
