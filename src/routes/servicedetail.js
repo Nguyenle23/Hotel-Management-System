@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const ServicedetailController = require('../app/controllers/servicedetailController');
+const ServicedetailController = require('../app/controllers/ServicedetailController');
 
 
 // tạo route kết nối đến controller 
