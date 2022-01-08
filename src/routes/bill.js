@@ -10,6 +10,4 @@ router.get('/:id/watch/backCheckIO', billController.back);
 
 router.put('/:id/store', billController.store);
 
-
-
 module.exports = router;
