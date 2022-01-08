@@ -9,6 +9,10 @@ const route = require('./routes');
 const app = express()
 const port = process.env.PORT || 5000
 
+const db = require('./config/db');
+
+//Connect to DB
+db.connect();
 // Static Files
 // app.use(express.static('public'))
 // app.use('/css', express.static(__dirname + 'public/css'))

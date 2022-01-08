@@ -6,12 +6,12 @@ class SiteController {
     
     //[GET] /room
     index(req, res, next){
-        // Room.find({})
-        //     .then(room => 
-        //         res.render('home')
-        //     )
-        //     .catch(next);
-        res.render('home')
+        Room.find({})
+            .then(room => 
+                res.render('home', { room: multipleMongooseToObject(room)})
+            )
+            .catch(next);
+        // res.render('home')
     }
 
 }
