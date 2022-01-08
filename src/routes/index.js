@@ -18,9 +18,11 @@ const bookingRoomRouter = require('./bookingRoom');
 const serviceTabRouter = require('./serviceTab');
 const roommanagerRouter = require('./roommanager');
 const promotionTabRouter = require('./promotionTab');
+const employeeRouter = require('./employee');
 
 function route(app) {
-
+    
+    app.use('/employee', employeeRouter);
     app.use('/promotionTab', promotionTabRouter);
     app.use('/roommanager', roommanagerRouter);
     app.use('/serviceTab', serviceTabRouter);
