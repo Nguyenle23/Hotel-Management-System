@@ -1,9 +1,10 @@
 # demo-hotel
 # Parallel Shine Hotel
-<br/>
+
 It works with the URL: https://demo-hotel-live.herokuapp.com/?fbclid=IwAR0MEI4_9huVQH1n4WCogfhiokQHV4OgaP14CPMVE3lJRiD0uKh2c-EGbPQ
 But sometime, it does not work because of the bandwith of heroku's server
-<br/>
+
+
 * How to clone:
 1. Click -> Code -> Open with Github desktop (Recommend use Github desktop for easy to clone a project)
 2. After clone successfull -> Open terminal in Visual Studio Code 
